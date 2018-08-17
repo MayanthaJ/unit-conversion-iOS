@@ -79,7 +79,7 @@ class WeightVC: UIViewController , UITextFieldDelegate{
         }
     }
     
-    //clear feileds when click on other textfeild
+    //clear feileds when click on other textfields
     @IBAction func clearGramOnCLick(_ sender: Any) {
         clearTextBoxes()
     }
@@ -95,7 +95,7 @@ class WeightVC: UIViewController , UITextFieldDelegate{
     }
     
     
-    //main functions that handles weight convertion class and set converted values to the textfeilds
+    //main functions that handles weight convertion class and set converted values to the textfields
     func setToTextBoxes(weight : Double , inputWeightType :  String){
         let weightC =  Weight()
         

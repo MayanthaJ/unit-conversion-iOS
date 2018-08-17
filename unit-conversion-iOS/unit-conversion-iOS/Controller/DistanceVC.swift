@@ -113,7 +113,7 @@ class DistanceVC: UIViewController , UITextFieldDelegate{
         clearTextBoxes()
     }
     
-     //main functions that handles distance convertion class and set converted values to the textfeilds
+     //main functions that handles distance convertion class and set converted values to the textfields
     func setToTextBoxes(distance : Double , inputDistanceType :  String){
     
         let distanceC = Distance()
@@ -146,7 +146,7 @@ class DistanceVC: UIViewController , UITextFieldDelegate{
         }
     }
     
-     //function that clears all textfeilds
+     //function that clears all textfields
     func clearTextBoxes(){
         meterTxt.text = ""
         footTxt.text = ""
