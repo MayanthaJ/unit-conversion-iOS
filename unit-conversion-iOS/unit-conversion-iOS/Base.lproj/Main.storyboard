@@ -13,7 +13,7 @@
         <!--Weight-->
         <scene sceneID="Jf3-fv-YI2">
             <objects>
-                <viewController id="jSz-yA-iN9" sceneMemberID="viewController">
+                <viewController id="jSz-yA-iN9" customClass="WeightVC" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Opt-zg-vyy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearOunceOnClick:" destination="jSz-yA-iN9" eventType="editingDidBegin" id="Ezk-1M-2OY"/>
+                                    <action selector="ounceConvert:" destination="jSz-yA-iN9" eventType="editingChanged" id="cUU-Sq-BUB"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cDe-SP-m3w">
                                 <rect key="frame" x="97" y="211" width="200" height="31"/>
@@ -45,7 +49,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearPundOnClick:" destination="jSz-yA-iN9" eventType="editingDidBegin" id="SfT-QR-JPW"/>
+                                    <action selector="poundConvert:" destination="jSz-yA-iN9" eventType="editingChanged" id="SvS-a8-tTa"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-eW-cr8">
                                 <rect key="frame" x="97" y="157" width="200" height="31"/>
@@ -55,7 +63,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearKiloOnCLick:" destination="jSz-yA-iN9" eventType="editingDidBegin" id="mJ5-OG-6pn"/>
+                                    <action selector="killoConvert:" destination="jSz-yA-iN9" eventType="editingChanged" id="xqD-LL-UdQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JNf-u3-8YK">
                                 <rect key="frame" x="97" y="103" width="200" height="31"/>
@@ -65,7 +77,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearGramOnCLick:" destination="jSz-yA-iN9" eventType="editingDidBegin" id="Rdb-35-ftR"/>
+                                    <action selector="gramCovert:" destination="jSz-yA-iN9" eventType="editingChanged" id="C2B-MV-1L8"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4j-9Q-Hlm">
                                 <rect key="frame" x="16" y="107" width="48" height="23"/>
@@ -117,6 +133,12 @@
                         <viewLayoutGuide key="safeArea" id="baR-tb-Qa3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Weight" image="food-scale-tool" id="BHL-6g-dtO"/>
+                    <connections>
+                        <outlet property="gramTxt" destination="JNf-u3-8YK" id="OTz-ml-LUs"/>
+                        <outlet property="killoTxt" destination="Cd2-eW-cr8" id="cPi-13-xmE"/>
+                        <outlet property="ounceTxt" destination="olk-eH-pkb" id="Vc3-aZ-iet"/>
+                        <outlet property="poundTxt" destination="cDe-SP-m3w" id="jEW-Hg-oNj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4e4-hI-Kxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,12 +147,12 @@
         <!--Temperature-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="TemperatureVC" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-pb-UgR">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xK-pb-UgR" customClass="Te">
                                 <rect key="frame" x="0.0" y="20" width="320" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1xK-pb-UgR" secondAttribute="height" multiplier="375:44" id="Mcf-40-JTY"/>
@@ -224,7 +246,7 @@
         <!--Speed-->
         <scene sceneID="UMd-2t-r7p">
             <objects>
-                <viewController id="UuF-jE-l1k" sceneMemberID="viewController">
+                <viewController id="UuF-jE-l1k" customClass="SpeedVC" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fFq-wM-5Ct">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,12 +367,12 @@
         <!--Distance-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="DistanceVC" customModule="unit_conversion_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mx-3n-hAh">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mx-3n-hAh" customClass="D">
                                 <rect key="frame" x="0.0" y="20" width="320" height="37.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3Mx-3n-hAh" secondAttribute="height" multiplier="375:44" id="cNS-eE-U8W"/>
@@ -443,7 +465,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="HHt-og-qWV" secondAttribute="trailing" constant="16" id="0SD-BV-i3G"/>
-                            <constraint firstAttribute="trailing" secondItem="3Mx-3n-hAh" secondAttribute="trailing" constant="-1" id="2G3-bq-U3V"/>
                             <constraint firstItem="WFg-cX-U3J" firstAttribute="top" secondItem="AxA-fy-3Os" secondAttribute="bottom" constant="30" id="2Jp-2D-eQJ"/>
                             <constraint firstItem="AxA-fy-3Os" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="2mU-xU-JtW"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Nhp-8g-DI6" secondAttribute="trailing" constant="16" id="49U-Cg-pMp"/>
@@ -461,7 +482,6 @@
                             <constraint firstItem="WFg-cX-U3J" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="awL-Qd-a9m"/>
                             <constraint firstItem="JAc-rb-ROT" firstAttribute="top" secondItem="3Mx-3n-hAh" secondAttribute="bottom" constant="50" id="cLn-lt-kRB"/>
                             <constraint firstItem="hP6-VT-oEI" firstAttribute="top" secondItem="HHt-og-qWV" secondAttribute="bottom" constant="23" id="dQr-Zq-bWU"/>
-                            <constraint firstAttribute="trailing" secondItem="3Mx-3n-hAh" secondAttribute="trailing" id="e4q-yW-sOO"/>
                             <constraint firstItem="JAc-rb-ROT" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="e5I-vO-VdP"/>
                             <constraint firstItem="HHt-og-qWV" firstAttribute="top" secondItem="iRA-Md-yNI" secondAttribute="bottom" constant="23" id="gZY-LG-8v6"/>
                             <constraint firstItem="iRA-Md-yNI" firstAttribute="top" secondItem="YtN-bG-eTi" secondAttribute="bottom" constant="23" id="jD2-et-AvO"/>
