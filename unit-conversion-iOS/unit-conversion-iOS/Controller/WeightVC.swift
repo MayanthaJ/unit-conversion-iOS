@@ -39,7 +39,7 @@ class WeightVC: UIViewController , UITextFieldDelegate{
         self.view.endEditing(true)
     }
     
-    //calculate functions
+    //calculate function calls
     //convert meters
     @IBAction func gramCovert(_ sender: Any) {
         if let gramTxt = gramTxt.text {

@@ -39,6 +39,8 @@ class SpeedVC: UIViewController , UITextFieldDelegate{
         self.view.endEditing(true)
     }
     
+    //calculate function calls
+    //convert MeterPerSec
     @IBAction func MeterPerSecConvert(_ sender: Any) {
         if let meterPerSecTxt = meterPerSecTxt.text {
             if let meterPerSecW = Double(meterPerSecTxt){
@@ -47,6 +49,7 @@ class SpeedVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+     //convert feetPerMin
     @IBAction func feetPerMinConvert(_ sender: Any) {
         if let feetPerMinTxt = feetPerMinTxt.text {
             if let feetPerMinW = Double(feetPerMinTxt){
@@ -55,6 +58,7 @@ class SpeedVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //convert kilometerPerHour
     @IBAction func kilometerPerHourConvert(_ sender: Any) {
         if let kilometerPerHourTxt = kilometerPerHourTxt.text {
             if let kilometerPerHourW = Double(kilometerPerHourTxt){
@@ -63,6 +67,7 @@ class SpeedVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //convert milesPerHour
     @IBAction func milesPerHourConvert(_ sender: Any) {
         if let milesPerHourTxt = milesPerHourTxt.text {
             if let milesPerHourW = Double(milesPerHourTxt){
@@ -71,6 +76,7 @@ class SpeedVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //clear feileds when click on other textfields
     @IBAction func clearMeterPerSecOnClick(_ sender: Any) {
         clearTextBoxes()
     }
