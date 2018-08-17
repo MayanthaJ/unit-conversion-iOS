@@ -286,7 +286,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearMilesPerHourOnClick:" destination="UuF-jE-l1k" eventType="editingDidBegin" id="5Jg-Kf-Q1T"/>
+                                    <action selector="milesPerHourConvert:" destination="UuF-jE-l1k" eventType="editingChanged" id="yDt-H5-Dkg"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-lx-F97">
                                 <rect key="frame" x="184" y="203" width="120" height="30"/>
@@ -296,7 +300,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearKilometerPerHourOnClick:" destination="UuF-jE-l1k" eventType="editingDidBegin" id="ARD-aZ-Kkg"/>
+                                    <action selector="kilometerPerHourConvert:" destination="UuF-jE-l1k" eventType="editingChanged" id="W4W-fr-Rvi"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meter per sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWx-eE-A1g">
                                 <rect key="frame" x="16" y="107" width="115" height="21.5"/>
@@ -330,7 +338,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="MeterPerSecConvert:" destination="UuF-jE-l1k" eventType="editingChanged" id="PoU-jO-neS"/>
+                                    <action selector="clearMeterPerSecOnClick:" destination="UuF-jE-l1k" eventType="editingDidBegin" id="TOa-z0-uoH"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-a5-QOq">
                                 <rect key="frame" x="184" y="150" width="120" height="30"/>
@@ -340,7 +352,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearFeetPerMinOnClick:" destination="UuF-jE-l1k" eventType="editingDidBegin" id="RUe-pB-7Uu"/>
+                                    <action selector="feetPerMinConvert:" destination="UuF-jE-l1k" eventType="editingChanged" id="lFc-mD-oBO"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -377,6 +393,12 @@
                         <viewLayoutGuide key="safeArea" id="mgB-nn-uoD"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Speed" image="speedometer" id="PW6-eR-Mqa"/>
+                    <connections>
+                        <outlet property="feetPerMinTxt" destination="RL9-a5-QOq" id="jY3-g3-Z52"/>
+                        <outlet property="kilometerPerHourTxt" destination="hWF-lx-F97" id="na6-vC-t5b"/>
+                        <outlet property="meterPerSecTxt" destination="imj-I2-rOd" id="JsW-ti-jkG"/>
+                        <outlet property="milesPerHourTxt" destination="EdQ-Ll-sUi" id="hbn-ug-4KN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RuA-54-Pgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
