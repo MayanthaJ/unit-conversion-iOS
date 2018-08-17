@@ -79,6 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
+                                    <action selector="clearAllWhenGramsEmpty:" destination="jSz-yA-iN9" eventType="editingDidEnd" id="WVq-vq-ufq"/>
                                     <action selector="clearGramOnCLick:" destination="jSz-yA-iN9" eventType="editingDidBegin" id="Rdb-35-ftR"/>
                                     <action selector="gramCovert:" destination="jSz-yA-iN9" eventType="editingChanged" id="C2B-MV-1L8"/>
                                 </connections>
@@ -389,7 +390,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearKilometerOnClick:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="h3Y-Ng-Ly1"/>
+                                    <action selector="kilometerConvert:" destination="8rJ-Kc-sve" eventType="editingChanged" id="hdh-IL-bWm"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-og-qWV">
                                 <rect key="frame" x="104" y="209" width="200" height="31"/>
@@ -399,7 +404,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearYardOnClick:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="rbQ-eI-Qbs"/>
+                                    <action selector="yardConvert:" destination="8rJ-Kc-sve" eventType="editingChanged" id="3hj-GM-9YN"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iRA-Md-yNI">
                                 <rect key="frame" x="104" y="155" width="200" height="31"/>
@@ -409,7 +418,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearFootOnClick:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="5w5-Of-WBf"/>
+                                    <action selector="footConvert:" destination="8rJ-Kc-sve" eventType="editingChanged" id="IoB-xN-aXJ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YtN-bG-eTi">
                                 <rect key="frame" x="104" y="101" width="200" height="31"/>
@@ -419,7 +432,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearMeterOnClick:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="vMP-xT-zFE"/>
+                                    <action selector="meterConvert:" destination="8rJ-Kc-sve" eventType="editingChanged" id="WFu-Rv-49o"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAc-rb-ROT">
                                 <rect key="frame" x="16" y="107" width="52" height="23"/>
@@ -453,7 +470,11 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="clearMileOnClick:" destination="8rJ-Kc-sve" eventType="editingDidBegin" id="RJk-N6-EjS"/>
+                                    <action selector="mileConvert:" destination="8rJ-Kc-sve" eventType="editingChanged" id="adU-jF-n57"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCO-sg-ll1">
                                 <rect key="frame" x="16" y="319" width="37" height="23"/>
@@ -503,6 +524,13 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" image="distance" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="footTxt" destination="iRA-Md-yNI" id="2Fa-It-xJl"/>
+                        <outlet property="kilometerTxt" destination="hP6-VT-oEI" id="W0z-ra-9Uv"/>
+                        <outlet property="meterTxt" destination="YtN-bG-eTi" id="efD-lI-bJM"/>
+                        <outlet property="mileTxt" destination="Nhp-8g-DI6" id="KyT-DL-XHy"/>
+                        <outlet property="yardTxt" destination="HHt-og-qWV" id="lad-dE-J19"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,24 +8,27 @@
 
 import Foundation
 class Weight {
+    //Temp variables
     var returnWeight : Double = 0.00
     var tempGramValue : Double = 0.00
     
+    //function to convert grams to kilo
     func convertGramToKilo( weight : Double) -> Double{
         returnWeight = weight / 1000
         return (returnWeight)
     }
-    
+    //function to convert grams to pounds
     func convertGramToPounds( weight : Double) -> Double{
         returnWeight = weight * 0.00220462
         return (returnWeight)
     }
-    
+    //function to convert grams to ounce
     func convertGramToOunce( weight : Double) -> Double{
         returnWeight = weight * 0.035274
         return (returnWeight)
     }
     
+    //function to other types to gram
     func convertToGram(fromType : String , weight : Double) -> Double{
         if fromType == "kilogram"{
             returnWeight =  weight * 1000
@@ -38,6 +41,7 @@ class Weight {
         return (returnWeight)
     }
     
+    //main function that returns all converion values
     func convertMain(fromType : String , toType : String , weight : Double) -> Double{
         
         if (fromType == "grams" && toType == "kilogram") {

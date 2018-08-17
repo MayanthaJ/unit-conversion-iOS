@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TemperatureVC: UIViewController {
+class TemperatureVC: UIViewController , UITextFieldDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,11 @@ class TemperatureVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    //Hide keypad when user touch outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }
 

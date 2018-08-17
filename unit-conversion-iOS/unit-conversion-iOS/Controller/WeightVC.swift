@@ -8,15 +8,27 @@
 
 import UIKit
 
-class WeightVC: UIViewController {
+class WeightVC: UIViewController , UITextFieldDelegate{
 
     @IBOutlet weak var gramTxt: UITextField!
     @IBOutlet weak var killoTxt: UITextField!
     @IBOutlet weak var poundTxt: UITextField!
     @IBOutlet weak var ounceTxt: UITextField!
     
+    //convertion types
+    let grams = "grams"
+    let kilogram = "kilogram"
+    let pound = "pound"
+    let ounce = "ounce"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.gramTxt.delegate = self
+        self.killoTxt.delegate = self
+        self.poundTxt.delegate = self
+        self.ounceTxt.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,37 +37,50 @@ class WeightVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Hide keypad when user touch outside
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        clearTextBoxed()
+    }
+    
+    //calculate functions
+    //convert meters
     @IBAction func gramCovert(_ sender: Any) {
         if let gramTxt = gramTxt.text {
             if let gramsW = Double(gramTxt){
-                setToTextBoxes(weight: gramsW, inputWeightType: "grams")
+                setToTextBoxes(weight: gramsW, inputWeightType: grams)
             }
         }
     }
     
+    //convert meters
     @IBAction func killoConvert(_ sender: Any) {
         if let killoTxt = killoTxt.text {
             if let killoW = Double(killoTxt){
-                setToTextBoxes(weight: killoW, inputWeightType: "kilogram")
+                setToTextBoxes(weight: killoW, inputWeightType: kilogram)
             }
         }
     }
     
+    //convert meters
     @IBAction func poundConvert(_ sender: Any) {
         if let poundTxt = poundTxt.text {
             if let poundW = Double(poundTxt){
-                setToTextBoxes(weight: poundW, inputWeightType: "pound")
-            }
-        }
-    }
-    @IBAction func ounceConvert(_ sender: Any) {
-        if let ounceTxt = ounceTxt.text {
-            if let ounceW = Double(ounceTxt){
-                setToTextBoxes(weight: ounceW, inputWeightType: "ounce")
+                setToTextBoxes(weight: poundW, inputWeightType: pound)
             }
         }
     }
     
+    //convert meters
+    @IBAction func ounceConvert(_ sender: Any) {
+        if let ounceTxt = ounceTxt.text {
+            if let ounceW = Double(ounceTxt){
+                setToTextBoxes(weight: ounceW, inputWeightType: ounce)
+            }
+        }
+    }
+    
+    //clear feileds when click on other textfeild
     @IBAction func clearGramOnCLick(_ sender: Any) {
         clearTextBoxed()
     }
@@ -70,12 +95,9 @@ class WeightVC: UIViewController {
         clearTextBoxed()
     }
     
+    
+    //main functions that handles weight convertion class and set converted values to the textfeilds
     func setToTextBoxes(weight : Double , inputWeightType :  String){
-        let grams = "grams"
-        let kilogram = "kilogram"
-        let pound = "pound"
-        let ounce = "ounce"
-        
         let weightC =  Weight()
         
         if inputWeightType == grams{
@@ -97,6 +119,7 @@ class WeightVC: UIViewController {
         }
     }
     
+    //function that clears all textfeilds
     func clearTextBoxed(){
         gramTxt.text = ""
         killoTxt.text = ""
