@@ -40,7 +40,6 @@ class WeightVC: UIViewController , UITextFieldDelegate{
     //Hide keypad when user touch outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-        clearTextBoxed()
     }
     
     //calculate functions
@@ -82,17 +81,17 @@ class WeightVC: UIViewController , UITextFieldDelegate{
     
     //clear feileds when click on other textfeild
     @IBAction func clearGramOnCLick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     @IBAction func clearKiloOnCLick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     @IBAction func clearPundOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     @IBAction func clearOunceOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     
@@ -120,7 +119,7 @@ class WeightVC: UIViewController , UITextFieldDelegate{
     }
     
     //function that clears all textfeilds
-    func clearTextBoxed(){
+    func clearTextBoxes(){
         gramTxt.text = ""
         killoTxt.text = ""
         poundTxt.text = ""

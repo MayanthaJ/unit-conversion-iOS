@@ -94,23 +94,23 @@ class DistanceVC: UIViewController , UITextFieldDelegate{
     
     //clear feileds when click on other textfeild
     @IBAction func clearMeterOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     @IBAction func clearFootOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     @IBAction func clearYardOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     @IBAction func clearKilometerOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
     @IBAction func clearMileOnClick(_ sender: Any) {
-        clearTextBoxed()
+        clearTextBoxes()
     }
     
      //main functions that handles distance convertion class and set converted values to the textfeilds
@@ -147,7 +147,7 @@ class DistanceVC: UIViewController , UITextFieldDelegate{
     }
     
      //function that clears all textfeilds
-    func clearTextBoxed(){
+    func clearTextBoxes(){
         meterTxt.text = ""
         footTxt.text = ""
         yardTxt.text = ""
