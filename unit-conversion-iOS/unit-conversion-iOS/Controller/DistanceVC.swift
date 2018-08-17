@@ -46,7 +46,7 @@ class DistanceVC: UIViewController , UITextFieldDelegate{
     }
     
     
-    //calculate functions
+    //calculate function calls
     //convert meters
     @IBAction func meterConvert(_ sender: Any) {
         if let meterTxt = meterTxt.text {

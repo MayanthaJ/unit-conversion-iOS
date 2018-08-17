@@ -135,7 +135,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weight" image="food-scale-tool" id="BHL-6g-dtO"/>
                     <connections>
-                        <outlet property="gramTxt" destination="JNf-u3-8YK" id="OTz-ml-LUs"/>
+                        <outlet property="gramTxt" destination="JNf-u3-8YK" id="GML-iR-HFU"/>
                         <outlet property="killoTxt" destination="Cd2-eW-cr8" id="cPi-13-xmE"/>
                         <outlet property="ounceTxt" destination="olk-eH-pkb" id="Vc3-aZ-iet"/>
                         <outlet property="poundTxt" destination="cDe-SP-m3w" id="jEW-Hg-oNj"/>

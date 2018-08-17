@@ -39,6 +39,8 @@ class TemperatureVC: UIViewController , UITextFieldDelegate{
         self.view.endEditing(true)
     }
     
+    //calculate function calls
+    //convert celcius
     @IBAction func celciusConvert(_ sender: Any) {
         if let celciusTxt = celciusTxt.text {
             if let celciusW = Double(celciusTxt){
@@ -47,6 +49,7 @@ class TemperatureVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //convert fahrenheit
     @IBAction func fahrenheitConvert(_ sender: Any) {
         if let fahrenheitTxt = fahrenheitTxt.text {
             if let fahrenheitW = Double(fahrenheitTxt){
@@ -55,6 +58,7 @@ class TemperatureVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //convert kelvin
     @IBAction func kelvinConvert(_ sender: Any) {
         if let kelvinTxt = kelvinTxt.text {
             if let kelvinW = Double(kelvinTxt){
@@ -63,6 +67,7 @@ class TemperatureVC: UIViewController , UITextFieldDelegate{
         }
     }
     
+    //clear feileds when click on other textfields
     @IBAction func clearCelciusOnClick(_ sender: Any) {
         clearTextBoxes()
     }

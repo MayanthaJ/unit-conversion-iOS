@@ -12,6 +12,12 @@ class Weight {
     var returnWeight : Double = 0.00
     var tempGramValue : Double = 0.00
     
+    //convertion types
+    let grams = "grams"
+    let kilogram = "kilogram"
+    let pound = "pound"
+    let ounce = "ounce"
+    
     //function to convert grams to kilo
     func convertGramToKilo( weight : Double) -> Double{
         returnWeight = weight / 1000
@@ -30,11 +36,11 @@ class Weight {
     
     //function to other types to gram
     func convertToGram(fromType : String , weight : Double) -> Double{
-        if fromType == "kilogram"{
+        if fromType == kilogram{
             returnWeight =  weight * 1000
-        }else if fromType == "pound"{
+        }else if fromType == pound{
             returnWeight =  weight * 453.592
-        }else if fromType == "ounce"{
+        }else if fromType == ounce{
             returnWeight =  weight * 28.3495
         }
         
@@ -44,61 +50,61 @@ class Weight {
     //main function that returns all converion values
     func convertMain(fromType : String , toType : String , weight : Double) -> Double{
         
-        if (fromType == "grams" && toType == "kilogram") {
+        if (fromType == grams && toType == kilogram) {
             tempGramValue = convertGramToKilo(weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "grams" && toType == "pound") {
+        }else if (fromType == grams && toType == pound) {
             tempGramValue = convertGramToPounds(weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "grams" && toType == "ounce") {
+        }else if (fromType == grams && toType == ounce) {
             tempGramValue = convertGramToOunce(weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "kilogram" && toType == "grams") {
+        }else if (fromType == kilogram && toType == grams) {
             
-            tempGramValue = convertToGram(fromType: "kilogram", weight: weight)
+            tempGramValue = convertToGram(fromType: kilogram, weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "kilogram" && toType == "pound") {
+        }else if (fromType == kilogram && toType == pound) {
             
-            tempGramValue = convertToGram(fromType: "kilogram", weight: weight)
+            tempGramValue = convertToGram(fromType: kilogram, weight: weight)
             returnWeight =  convertGramToPounds(weight: tempGramValue)
             
-        }else if (fromType == "kilogram" && toType == "ounce") {
+        }else if (fromType == kilogram && toType == ounce) {
             
-            tempGramValue = convertToGram(fromType: "kilogram", weight: weight)
+            tempGramValue = convertToGram(fromType: kilogram, weight: weight)
             returnWeight =  convertGramToOunce(weight: tempGramValue)
             
-        }else if (fromType == "pound" && toType == "grams") {
+        }else if (fromType == pound && toType == grams) {
             
-            tempGramValue = convertToGram(fromType: "pound", weight: weight)
+            tempGramValue = convertToGram(fromType: pound, weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "pound" && toType == "kilogram") {
+        }else if (fromType == pound && toType == kilogram) {
             
-            tempGramValue = convertToGram(fromType: "pound", weight: weight)
+            tempGramValue = convertToGram(fromType: pound, weight: weight)
             returnWeight =  convertGramToKilo(weight: tempGramValue)
             
-        }else if (fromType == "pound" && toType == "ounce") {
+        }else if (fromType == pound && toType == ounce) {
             
-            tempGramValue = convertToGram(fromType: "pound", weight: weight)
+            tempGramValue = convertToGram(fromType: pound, weight: weight)
             returnWeight =  convertGramToOunce(weight: tempGramValue)
             
-        }else if (fromType == "ounce" && toType == "grams") {
+        }else if (fromType == ounce && toType == grams) {
             
-            tempGramValue = convertToGram(fromType: "ounce", weight: weight)
+            tempGramValue = convertToGram(fromType: ounce, weight: weight)
             returnWeight =  tempGramValue
             
-        }else if (fromType == "ounce" && toType == "kilogram") {
+        }else if (fromType == ounce && toType == kilogram) {
             
-            tempGramValue = convertToGram(fromType: "ounce", weight: weight)
+            tempGramValue = convertToGram(fromType: ounce, weight: weight)
             returnWeight =  convertGramToKilo(weight: tempGramValue)
             
-        }else if (fromType == "ounce" && toType == "pound") {
+        }else if (fromType == ounce && toType == pound) {
             
-            tempGramValue = convertToGram(fromType: "ounce", weight: weight)
+            tempGramValue = convertToGram(fromType: ounce, weight: weight)
             returnWeight =  convertGramToPounds(weight: tempGramValue)
             
         }

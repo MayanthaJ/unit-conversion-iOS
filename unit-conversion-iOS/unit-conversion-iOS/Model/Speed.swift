@@ -18,17 +18,17 @@ class Speed{
     let kilometerPerHour = "kilometerPerHour"
     let milesPerHour = "milesPerHour"
     
-    //function to convert grams to feetPerMin
+    //function to convert meterPerSec to feetPerMin
     func convertMeterPerSecToFeetPerMin( speed : Double) -> Double{
         returnSpeed = speed * 196.85
         return (returnSpeed)
     }
-    //function to convert grams to kilometerPerHour
+    //function to convert meterPerSec to kilometerPerHour
     func converMterPerSecoKilometerPerHour( speed : Double) -> Double{
         returnSpeed = speed * 3.6
         return (returnSpeed)
     }
-    //function to convert grams to milesPerHour
+    //function to convert meterPerSec to milesPerHour
     func convertMeterPerSecToMilesPerHour( speed : Double) -> Double{
         returnSpeed = speed * 2.236936
         return (returnSpeed)
